@@ -1,0 +1,58 @@
+/* Footer ----------------------- */
+
+.shareLink {
+    width: 100%;
+    text-align: center;
+    padding: 3em 0 5em 0;
+    ul>li {
+        display: inline-block;
+        padding: 0 15px;
+        img {
+            width: 50px;
+            opacity: 1;
+            @include transition(opacity .3s);
+        }
+        a:hover {
+            img {
+                opacity: .7;
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    .footerBar {
+        background-color: #b5b5b5;
+        padding: 15px 0;
+        font-size: 0;
+        ul {
+            display: inline-block;
+            width: 100%;
+            text-align: right;
+            vertical-align: middle;
+            li {
+                font-size: 1rem;
+                display: inline-block;
+                color: #ffffff;
+                padding: 0 20px;
+                border-right: 1px solid #ffffff;
+                a {
+                    color: #ffffff;
+                }
+                &:last-of-type {
+                    border-right: none;
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    footer {
+        display: none;
+    }
+}

@@ -1,0 +1,86 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.visible-desktop {
+    display: block !important;
+}
+
+.visible-tablet {
+    display: none !important;
+}
+
+.visible-phone {
+    display: none !important;
+}
+
+.hidden-desktop {
+    display: none !important;
+}
+
+.hidden-tablet {
+    display: block !important;
+}
+
+.hidden-phone {
+    display: block !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .visible-desktop {
+        display: none !important;
+    }
+    .visible-tablet {
+        display: block !important;
+    }
+    .visible-phone {
+        display: none !important;
+    }
+    .hidden-desktop {
+        display: block !important;
+    }
+    .hidden-tablet {
+        display: none !important;
+    }
+    .hidden-phone {
+        display: block !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .visible-desktop {
+        display: none !important;
+    }
+    .visible-tablet {
+        display: none !important;
+    }
+    .visible-phone {
+        display: block !important;
+    }
+    .hidden-desktop {
+        display: block !important;
+    }
+    .hidden-tablet {
+        display: block !important;
+    }
+    .hidden-phone {
+        display: none !important;
+    }
+}
