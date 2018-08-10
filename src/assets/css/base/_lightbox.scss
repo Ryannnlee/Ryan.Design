@@ -200,7 +200,7 @@
     padding: 0 25px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 767px) {
     .lightbox-box {
         border: 5px solid #fff;
     }
