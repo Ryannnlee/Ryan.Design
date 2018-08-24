@@ -1,12 +1,15 @@
 @import "base/reset";
 @import "base/header";
 @import "base/transform";
+$primaryColor: #ff7800;
+$secondColor: #575757;
 body {
     font-family: Century Gothic, "微軟正黑體", "Arial", Helvetica, sans-serif;
     font-size: 16px;
+    font-weight: normal;
 }
 
-html,
+*,
 *::before,
 *::after {
     box-sizing: border-box;
@@ -15,6 +18,7 @@ html,
 a {
     text-decoration: none;
     cursor: pointer;
+    color: $secondColor;
 }
 
 img {
@@ -30,27 +34,27 @@ img {
 }
 
 .visible-desktop {
-    display: block !important;
+    display: block;
 }
 
 .visible-tablet {
-    display: none !important;
+    display: none;
 }
 
 .visible-phone {
-    display: none !important;
+    display: none;
 }
 
 .hidden-desktop {
-    display: none !important;
+    display: none;
 }
 
 .hidden-tablet {
-    display: block !important;
+    display: block;
 }
 
 .hidden-phone {
-    display: block !important;
+    display: block;
 }
 
 @media screen and (max-width: 1440px) {
@@ -61,22 +65,22 @@ img {
 
 @media screen and (max-width: 1024px) {
     .visible-desktop {
-        display: none !important;
+        display: none;
     }
     .visible-tablet {
-        display: block !important;
+        display: block;
     }
     .visible-phone {
-        display: none !important;
+        display: none;
     }
     .hidden-desktop {
-        display: block !important;
+        display: block;
     }
     .hidden-tablet {
-        display: none !important;
+        display: none;
     }
     .hidden-phone {
-        display: block !important;
+        display: block;
     }
 }
 
@@ -85,21 +89,21 @@ img {
         font-size: 14px;
     }
     .visible-desktop {
-        display: none !important;
+        display: none;
     }
     .visible-tablet {
-        display: none !important;
+        display: none;
     }
     .visible-phone {
-        display: block !important;
+        display: block;
     }
     .hidden-desktop {
-        display: block !important;
+        display: block;
     }
     .hidden-tablet {
-        display: block !important;
+        display: block;
     }
     .hidden-phone {
-        display: none !important;
+        display: none;
     }
 }

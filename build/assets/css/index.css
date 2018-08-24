@@ -1,1 +1,128 @@
-/* No CSS */
+.Container {
+  width: 79%;
+  margin-left: 21%;
+  padding: 30px 50px;
+}
+
+h1 {
+  font-size: 2em;
+  letter-spacing: 2px;
+  margin-bottom: 3.5%;
+}
+
+.mixerContainer {
+  width: 100%;
+  max-width: 1270px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+      grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+
+.projectList {
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transform: translate(0, 0) scale(1);
+  -webkit-transform: translate(0, 0) scale(1);
+  -moz-transform: translate(0, 0) scale(1);
+  -ms-transform: translate(0, 0) scale(1);
+  -o-transform: translate(0, 0) scale(1);
+}
+
+.projectList .PLPhoto {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.projectList .PLPhoto:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #000000;
+  opacity: 0.2;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+.projectList .PLPhoto > img {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+.projectList .PLText {
+  padding: 6% 4%;
+  background: #eeeeee;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+.projectList .PLText h2 {
+  font-size: 1.2em;
+  color: #ff7800;
+  margin-bottom: 2em;
+}
+
+.projectList .PLText p,
+.projectList .PLText span {
+  font-size: 0.75em;
+  color: #6d6d6d;
+}
+
+.projectList .PLText .PLTime {
+  float: right;
+}
+
+@media screen and (min-width: 1024px) {
+  .projectList:hover {
+    transform: translate(-5px, -5px) scale(1.05);
+    -webkit-transform: translate(-5px, -5px) scale(1.05);
+    -moz-transform: translate(-5px, -5px) scale(1.05);
+    -ms-transform: translate(-5px, -5px) scale(1.05);
+    -o-transform: translate(-5px, -5px) scale(1.05);
+    -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  }
+  .projectList:hover .PLPhoto:after {
+    opacity: 0;
+  }
+  .projectList:hover .PLPhoto > img {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+  }
+  .projectList:hover .PLText {
+    background: #f6f6f6;
+  }
+}
