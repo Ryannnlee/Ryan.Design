@@ -27,11 +27,34 @@ $(function() {
             }
         });
     });
-    // filter();
 
     $('.events .PLText span.sort').text('活動網站');
     $('.website .PLText span.sort').text('官方網站');
     $('.banner .PLText span.sort').text('數位宣傳');
     $('.video .PLText span.sort').text('動態影片');
     $('.graphic .PLText span.sort').text('平面設計');
+
+
+    $('.mixItem').on('click', function() {
+        let $this = $(this);
+        $this.addClass('mixMenuActive').siblings('.mixMenuActive').removeClass('mixMenuActive');
+        $('.mixItemSelected').text('FILTER');
+    });
+
+    $('.mixFilter').on('click', function() {
+        $('.mixItemOption').addClass('visible');
+    });
+
+    $('.filter').each(function() {
+        $(this).on('click', function() {
+            $('.mixItemOption').removeClass('visible');
+            var $thisText = $(this).attr('data-subjects');
+            console.log($thisText);
+            $('.mixItemSelected').text($thisText);
+            return false
+        });
+
+    });
+
+
 });

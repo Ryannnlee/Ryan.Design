@@ -17,6 +17,129 @@ h1 {
     margin-bottom: 3.5%;
 }
 
+.mixMenu {
+    width: 100%;
+    display: block;
+    margin-bottom: 3.5%;
+    font-size: 1em;
+    line-height: 1.66em;
+    letter-spacing: 1.5px;
+    .mixItemS {
+        display: inline-block;
+        margin-right: 25px;
+        color: $secondColor;
+        position: relative;
+        cursor: pointer;
+        vertical-align: top;
+        &:before {
+            content: '';
+            width: 0%;
+            height: 1px;
+            background: $secondColor;
+            position: absolute;
+            right: 50%;
+            left: 50%;
+            bottom: 2px;
+            opacity: 0;
+            @include transition(all 0.3s);
+        }
+        @media screen and (min-width: 1024px) {
+            &:hover:before {
+                width: 100%;
+                opacity: 1;
+                right: 0;
+                left: 0;
+            }
+        }
+        &.mixMenuActive {
+            color: $primaryColor;
+            &:before {
+                width: 100%;
+                opacity: 1;
+                right: 0;
+                left: 0;
+                background: $primaryColor;
+            }
+        }
+        .mixItemSelected {
+            position: relative;
+            &:after {
+                content: '';
+                width: 0;
+                height: 0;
+                position: absolute;
+                top: 50%;
+                right: -12px;
+                border-style: solid;
+                border-width: 6px 4px 0 4px;
+                border-color: #ff7800 transparent transparent transparent;
+                @include transform(translate(0, -50%));
+                // @include transition(all 0.3s);
+            }
+        }
+    }
+    .mixFilter {
+        .mixItemOption.visible {
+            opacity: 1;
+            z-index: 2;
+        }
+    }
+    .mixItemOption {
+        // display: none;
+        width: 300px;
+        display: block;
+        position: absolute;
+        top: 32px;
+        left: 0;
+        z-index: 0;
+        background: #f0f0f0;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        padding: 25px 15px;
+        opacity: 0;
+        @include transition(all 0.3s);
+        .filter>span {
+            width: 80px;
+            display: inline-block;
+            margin-right: 20px;
+        }
+        ul {
+            font-size: 1em;
+            line-height: 3em;
+            letter-spacing: 1px;
+            position: relative;
+            color: $secondColor;
+            .marked {
+                width: 4px;
+                height: 0;
+                background: $primaryColor;
+                position: absolute;
+                top: 0;
+                left: -15px;
+                @include transition( all 0.3s);
+            }
+            >li:hover~.marked {
+                height: 1.5em;
+                margin-top: -0.25em;
+            }
+            >li:nth-child(1):hover~.marked {
+                @include transform(translate(0, 1em));
+            }
+            >li:nth-child(2):hover~.marked {
+                @include transform(translate(0, 4em));
+            }
+            >li:nth-child(3):hover~.marked {
+                @include transform(translate(0, 7em));
+            }
+            >li:nth-child(4):hover~.marked {
+                @include transform(translate(0, 10em));
+            }
+            >li:nth-child(5):hover~.marked {
+                @include transform(translate(0, 13em));
+            }
+        }
+    }
+}
+
 .mixerContainer {
     width: 100%;
     max-width: 1270px;
