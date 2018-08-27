@@ -35,6 +35,12 @@ $(function () {
     $('.video .PLText span.sort').text('動態影片');
     $('.graphic .PLText span.sort').text('平面設計');
 
+    //project list time
+    $('.projectList').each(function () {
+        var $PLTime = $(this).attr('data-published-date');
+        $(this).find('.PLTime').text($PLTime);
+    });
+
     $('.mixItem').on('click', function () {
         var $this = $(this);
         $this.addClass('mixMenuActive').siblings('.mixMenuActive').removeClass('mixMenuActive');

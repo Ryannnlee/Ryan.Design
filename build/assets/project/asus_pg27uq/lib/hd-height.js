@@ -1,0 +1,1 @@
+!function(){"use strict";$("#special-sectionOverview, #sectionOverview").height($("#hd").height())}(),$(window).resize(function(){$("#special-sectionOverview, #sectionOverview").height($("#hd").height())}),$(window).scroll(function(){$("#special-sectionOverview, #sectionOverview").height($("#hd").height())});
