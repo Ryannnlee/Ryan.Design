@@ -17,7 +17,7 @@ $secondColor: #575757;
 }
 
 .headContainer {
-    width: 90%;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
     position: relative;
@@ -25,6 +25,7 @@ $secondColor: #575757;
 
 #logo {
     max-width: 191px;
+    margin-left: 10%;
     margin-bottom: 15%;
 }
 
@@ -80,14 +81,15 @@ $secondColor: #575757;
 
 //menu
 .navTabs {
-    margin-top: 30%;
+    margin-top: 20%;
     border-bottom: 1px solid #d3d3d3;
-    padding-bottom: 15%;
-    margin-bottom: 15%;
+    padding-bottom: 10%;
+    margin-bottom: 10%;
 }
 
 #menu {
     li {
+        @include transition(all 0.6s);
         margin-bottom: 10%;
         a {
             letter-spacing: 2px;
@@ -130,7 +132,7 @@ $secondColor: #575757;
 .aboutUs {
     P {
         font-size: 1em;
-        line-height: 1.66em;
+        line-height: 1.44em;
         color: $secondColor;
     }
 }
@@ -149,7 +151,7 @@ $secondColor: #575757;
         display: inline-block;
         vertical-align: top;
         margin: 0 2%;
-        margin-bottom: 20px;
+        margin-bottom: 5%;
     }
 }
 
@@ -159,10 +161,11 @@ $secondColor: #575757;
     >p {
         display: inline-block;
         font-size: 0.75em;
-        line-height: 1.44em;
+        line-height: 1.2em;
         position: relative;
         padding-left: 15px;
         color: $secondColor;
+        text-align: left;
         &:before {
             content: '';
             width: 12px;
@@ -170,9 +173,182 @@ $secondColor: #575757;
             background: url(../images/copy.svg) center no-repeat;
             background-size: cover;
             position: absolute;
-            top: 50%;
+            top: 2px;
             left: 0;
+        }
+    }
+}
+
+.buttonContainer {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    height: 18px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 1001;
+    @include transform(translate(0, -50%));
+    @include transition(opacity .25s ease);
+}
+
+.buttonContainer span {
+    background: $primaryColor;
+    border: none;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    @include transform(translateX(-50%));
+    @include transition(all .35s ease);
+    cursor: pointer;
+}
+
+.buttonContainer span:nth-child(2) {
+    top: 50%;
+}
+
+.buttonContainer span:nth-child(3) {
+    top: 100%;
+}
+
+@media (min-width: 1025px) {
+    .buttonContainer {
+        display: none;
+    }
+}
+
+.buttonContainer.active .top {
+    @include transform(translateY(8px) translateX(-50%) rotate(45deg));
+    background: $primaryColor;
+}
+
+.buttonContainer.active .middle {
+    opacity: 0;
+    background: $primaryColor;
+}
+
+.buttonContainer.active .bottom {
+    @include transform(translateY(-10px) translateX(-50%) rotate(-45deg));
+    background: $primaryColor;
+}
+
+@media screen and (max-width: 1599px) {
+    #logo {
+        width: 80%;
+        margin-left: 0;
+    }
+    .man,
+    .navTabs,
+    .aboutUs {
+        width: 100%;
+    }
+    .aboutUs P {
+        font-size: 0.8em;
+        letter-spacing: 1px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        padding: 10px;
+    }
+    .man,
+    .aboutUs,
+    .footer {
+        display: none;
+    }
+    #logo {
+        margin: 0;
+    }
+    .navTabs {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 98;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        @include transition(all .5s);
+        margin-top: 0;
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        font-size: 1.15em;
+    }
+    #overlay {
+        position: fixed;
+        background: rgba(255, 255, 255, 0.98);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        height: 0%;
+        opacity: 0;
+        opacity: 1\9\0;
+        visibility: hidden;
+        @include transition(all 0.3s);
+        overflow: hidden;
+        z-index: 1000;
+        &.open {
+            opacity: 0.95;
+            visibility: visible;
+            height: 100%;
+            li {
+                -webkit-animation: fadeInRight 0.5s ease forwards;
+                animation: fadeInRight 0.5s ease forwards;
+                -webkit-animation-delay: 0.35s;
+                animation-delay: 0.35s;
+                &:nth-child(2) {
+                    -webkit-animation-delay: 0.4s;
+                    animation-delay: 0.4s;
+                }
+                &:nth-child(3) {
+                    -webkit-animation-delay: 0.45s;
+                    animation-delay: 0.45s;
+                }
+                &:nth-child(4) {
+                    -webkit-animation-delay: 0.5s;
+                    animation-delay: 0.5s;
+                }
+            }
+        }
+        ul {
+            width: 100%;
+            position: relative;
+            top: 50%;
             @include transform(translate(0, -50%));
         }
+        li {
+            opacity: 0;
+            opacity: 1\9\0;
+            position: relative;
+            margin: 2em 0;
+        }
+    }
+}
+
+@-webkit-keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        left: 20%;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        left: 20%;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
     }
 }

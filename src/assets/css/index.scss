@@ -7,6 +7,11 @@ $secondColor: #575757;
     padding: 30px 50px;
 }
 
+.scrollbar-dynamic>.scroll-element.scroll-y:hover .scroll-element_outer,
+.scrollbar-dynamic>.scroll-element.scroll-y.scroll-draggable .scroll-element_outer {
+    width: 15px;
+}
+
 h1 {
     font-size: 2em;
     letter-spacing: 2px;
@@ -85,7 +90,7 @@ h1 {
         width: 300px;
         display: block;
         position: absolute;
-        top: 32px;
+        top: 26px;
         left: 0;
         z-index: 0;
         background: #f0f0f0;
@@ -140,13 +145,14 @@ h1 {
     width: 100%;
     max-width: 1270px;
     display: grid;
-    grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-column-gap: 30px;
     grid-row-gap: 30px;
 }
 
 .projectList {
+    background: #eeeeee;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
     @include transition(all 0.3s);
     @include transform(translate(0, 0)scale(1));
@@ -200,12 +206,53 @@ h1 {
             &:after {
                 opacity: 0;
             }
-            >img {
-                // @include transform(scale(1.05));
-            }
         }
         .PLText {
             background: #f6f6f6;
+        }
+    }
+}
+
+@media screen and (max-width: 1399px) {
+    .mixerContainer {
+        width: 100%;
+        -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .Container {
+        width: 100%;
+        margin: 0;
+        padding: 90px 15px 15px 15px;
+    }
+    .hidden-desktop.footer {
+        position: inherit;
+        padding: 15px;
+        background: #eeeeee;
+        .footerIcon li {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .mixerContainer {
+        -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .mixMenu .mixItemOption {
+        width: 500%;
+        left: -25%;
+        .filter>span {
+            width: auto;
+            margin-right: 10px;
         }
     }
 }

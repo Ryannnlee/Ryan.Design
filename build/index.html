@@ -2,17 +2,18 @@
 <html lang="en">
 
 <head>
-    <title>RYAN PORTFILIO</title>
+    <title>RYAN | Portfilio</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale= 1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="xxx" />
-    <meta name="Keywords" content="xxx" />
+    <meta name="Description" content="" />
+    <meta name="Keywords" content="" />
     <meta name="geo.region" content="tw" />
     <meta name="rating" content="general" />
-    <meta property="og:title" content="" />
+    <meta property="og:title" content="RYAN | Portfilio" />
     <meta property="og:description" content="" />
     <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="assets/lib/css/jquery.scrollbar.css" type="text/css" media="all" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" />
 
 
@@ -21,13 +22,13 @@
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
-
+    <script src="assets/lib/js/jquery.scrollbar.js"></script>
 </head>
 
 <body>
 
-<div class="wrapper">
-
+<div class="ScrollBarSet  scrollbar-dynamic">
+    <div class="wrapper">
 <div class="header">
     <div class="headContainer">
         <div id="logo">
@@ -87,239 +88,446 @@
     </div>
 </div>
 
-    <div class="Container">
+        <div class="Container">
+            <div id="tabProject">
+                <h1>PROJECT</h1>
 
-        <div id="tabProject">
-            <h1>PROJECT</h1>
-
-
-            <div class="mixMenu">
-                <div class="mixItem mixItemS mixAll mixMenuActive"><span data-filter="all">ALL</span></div>
-                <div class="mixItem mixItemS mixFilter">
-                    <div class="mixItemSelected">FILTER</div>
-                    <div class="mixItemOption">
-                        <ul>
-                            <li class="filter" data-subjects="活動網站" data-filter=".events"><span>活動網站</span>Event website</li>
-                            <li class="filter" data-subjects="數位宣傳" data-filter=".banner"><span>數位宣傳</span>Digital promotion</li>
-                            <li class="filter" data-subjects="動態影片" data-filter=".video"><span>動態影片</span>Dynamic movie</li>
-                            <li class="filter" data-subjects="練習" data-filter=".practice"><span>練習</span>Practice</li>
-                            <div class="marked"></div>
-                        </ul>
+                <div class="mixMenu">
+                    <div class="mixItem mixItemS mixAll mixMenuActive"><span data-filter="all">ALL</span></div>
+                    <div class="mixItem mixItemS mixFilter">
+                        <div class="mixItemSelected">FILTER</div>
+                        <div class="mixItemOption">
+                            <ul>
+                                <li class="filter" data-subjects="活動網站" data-filter=".events"><span>活動網站</span>Event website</li>
+                                <li class="filter" data-subjects="數位宣傳" data-filter=".banner"><span>數位宣傳</span>Digital promotion</li>
+                                <li class="filter" data-subjects="動態影片" data-filter=".video"><span>動態影片</span>Dynamic movie</li>
+                                <li class="filter" data-subjects="練習" data-filter=".practice"><span>練習</span>Practice</li>
+                                <div class="marked"></div>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+
+                <div class="mixerContainer">
+                    <!-- Event website -->
+                    <div class="projectList mix events" data-published-date="2018-03">
+                        <a href="http://www.daehyon.com/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/daehyon.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>Daehyon Offical Site</h2>
+                                <p>Daehyon / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix events" data-published-date="2018-06">
+                        <a href="assets/project/asus_GameRouter/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/asus_GameRouter.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>ASUS Gaming Router</h2>
+                                <p>ASUS / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix events" data-published-date="2018-04">
+                        <a href="assets/project/asus_pg27uq/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/asus_pg27uq.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>ASUS PG27UQ</h2>
+                                <p>ASUS / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix events" data-published-date="2018-07">
+                        <a href="http://cestudio.tw/portfolio/case/event/Fundsyes/fundsyes_20180726/index.html" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/foundsyes.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>每月999 財富久久久</h2>
+                                <p>鉅亨基金平台 / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix events" data-published-date="2018-05">
+                        <a href="http://cestudio.tw/portfolio/case/event/mio/record/index.html" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/mio.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>Mio 愛演 / 犯規 你有錄</h2>
+                                <p>Mio / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix events" data-published-date="2018-04">
+                        <a href="http://cestudio.tw/portfolio/case/event/HYUNDAI/Elantra/index.html" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/elantra.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>ELANTRA 安全智能版</h2>
+                                <p>HYUNDAI / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix events" data-published-date="2017-11">
+                        <a href="assets/project/nomura/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/nomura.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>征服亞洲 稱霸8方</h2>
+                                <p>野村投信 / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix events" data-published-date="2018-07">
+                        <a href="https://scholarship.foxconnfoundation.org/index.php" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/foxconn.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>您的夢想頻率 被聽見</h2>
+                                <p>鴻海獎學鯨 / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix events" data-published-date="2017-01">
+                        <a href="https://www.elancyl.com.tw/event/aderma_exomega/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/aderma.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>艾芙美燕麥新葉</h2>
+                                <p>艾芙美 / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix events" data-published-date="2017-08">
+                        <a href="http://demo-d2.webssup.com/van/website/VAN-1_WebsiteLayout_201706/0803_final_v1/desktop/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/van1.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>和平大苑</h2>
+                                <p>和平大苑 / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix events" data-published-date="2017-12">
+                        <a href="http://demo-d2.webssup.com/van/website/van-13_Website_201712/0628_packfile_v1/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/van13.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>大觀自若</h2>
+                                <p>大觀自若 / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix events" data-published-date="2018-01">
+                        <a href="http://demo-d2.webssup.com/van/website/VAN-16_Website_201801/0824_v1/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/van16.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>礁溪湯園2</h2>
+                                <p>礁溪湯園2 / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix events" data-published-date="2018-08">
+                        <a href="http://demo-d2.webssup.com/van/website/VAN-18_Website_201808/v1/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/van18.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>藍田陞玉</h2>
+                                <p>藍田陞玉 / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix events" data-published-date="2016-07">
+                        <a href="http://webssup-tw.com/dominos-2016lucky/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/dominosevent.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>週年慶發票登入抽獎</h2>
+                                <p>Dominos / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix events" data-published-date="2017-03">
+                        <a href="http://demo-d2.webssup.com/Panasonic/website/PanasonicBeauty/201703/sp/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/PanasonicBeauty2.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>Panasonic Beauty</h2>
+                                <p>Panasonic / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix events" data-published-date="2016-11">
+                        <a href="http://demo-d2.webssup.com/Panasonic/website/PanasonicBeauty/201611/sp/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/PanasonicBeauty1.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>Panasonic Beauty NA98</h2>
+                                <p>Panasonic / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix events" data-published-date="2018-04">
+                        <a href="http://demo-d2.webssup.com/Allianz/AL-179_Allianz_Internal_Design_201804/0606_gacode/mind-test/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/allianz.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>安聯人壽 足下測驗</h2>
+                                <p>Allianz / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix events" data-published-date="2018-05">
+                        <a href="http://demo-d2.webssup.com/CSTW/CSTW-11/website/ryan_test/0810_v1/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/green.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>綠的美一天</h2>
+                                <p>GREEN / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Banner website -->
+                    <div class="projectList mix banner" data-published-date="2017-08">
+                        <a href="http://cestudio.tw/demo/smart/banner/v2/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/banner/smart01.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>Smart Agility 星自選</h2>
+                                <p>Mercedes Benz / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix banner" data-published-date="2018-05">
+                        <a href="http://cestudio.tw/portfolio/case/banner/LandRover/LandRover_Velar_H5_Banner201805/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/banner/landrover01.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>New Rage Rover Velar</h2>
+                                <p>LandRover / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix banner" data-published-date="2017-08">
+                        <a href="http://demo-d2.webssup.com/landrover/banner/LR-11_Discovery_H5_Banner_201708/v6/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/banner/landrover02.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>All New Discovery</h2>
+                                <p>LandRover / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix banner" data-published-date="2017-09">
+                        <a href="http://demo-d2.webssup.com/landrover/banner/LR-13_All-NewDiscovery_H5Banner_201709/v2/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/banner/landrover03.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>All New Discovery</h2>
+                                <p>LandRover / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix banner" data-published-date="2017-02">
+                        <a href="http://demo-d2.webssup.com/landrover/banner/LR-3_RangRoverSport(RRS)_H5Banner_201702/v1/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/banner/landrover04.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>Range Rover Sport</h2>
+                                <p>LandRover / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix banner" data-published-date="2016-11">
+                        <a href="http://demo-d2.webssup.com/Jaguar/banner/JAG-1_XF-H5BannerResize_201611/v1/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/banner/jaguar01.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>JAGUAR XF</h2>
+                                <p>JAGUAR / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix banner" data-published-date="2016-10">
+                        <a href="http://demo-d2.webssup.com/Jaguar/banner/JAG-1610_FiveCar_201610/v1/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/banner/jaguar02.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>THE JAGUAR RANGE</h2>
+                                <p>JAGUAR / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix banner" data-published-date="2016-12">
+                        <a href="http://demo-d2.webssup.com/Jaguar/banner/JAG-2_F-Type_H5Banner_201612/v1/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/banner/jaguar03.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>F-TYPE SVR</h2>
+                                <p>JAGUAR / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix banner" data-published-date="2016-10">
+                        <a href="http://demo-d2.webssup.com/Jaguar/banner/JAG-1610_TheArtOfPerformanceTourBanner_201610/v1/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/banner/jaguar04.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>The Art Of Performance Tour</h2>
+                                <p>JAGUAR / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix banner" data-published-date="2017-06">
+                        <a href="http://cestudio.tw/portfolio/case/banner/Jaguar/JAGUAR-7_SP_H5_Banner_201706/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/banner/jaguar05.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>THE JAGUAR RANGE</h2>
+                                <p>JAGUAR / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix banner" data-published-date="2018-02">
+                        <a href="http://demo-d2.webssup.com/Jaguar/banner/JAG-14_2-3month_H5banner_201802/v4/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/banner/jaguar06.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>F-PACE 3.0L</h2>
+                                <p>JAGUAR / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix banner" data-published-date="2018-02">
+                        <a href="http://demo-d2.webssup.com/Jaguar/banner/JAG-14_2-3month_H5banner_201802/v4/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/banner/jaguar06.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>F-PACE 3.0L</h2>
+                                <p>JAGUAR / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix banner" data-published-date="2017-08">
+                        <a href="http://demo-d2.webssup.com/Mercedes-Benz/banner/MB-Agility-banner_201802/v12/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/banner/benz01.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>Agility 星自選</h2>
+                                <p>Mercedes Benz / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix banner" data-published-date="2017-08">
+                        <a href="http://demo-d2.webssup.com/HYUNDAI/HYUNDAI-6_H5banner_201807/banner/v6/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/banner/hyundai01.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>2018 大顯神蹟</h2>
+                                <p>HYUNDAI / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+
+
+
+
+                    <!-- Video website -->
+                    <div class="projectList mix video" data-published-date="2017-08">
+                        <a href="http://cestudio.tw/demo/smart/banner/v3/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/video/smart01.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>Smart Agility 星自選</h2>
+                                <p>Mercedes Benz / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="projectList mix video" data-published-date="2017-03">
+                        <a href="http://demo-d2.webssup.com/Mercedes-Benz/digital-poster/CES-2_AgilityDigitalPoster_201703/v1/" target="_blank">
+                            <div class="PLPhoto">
+                                <img src="assets/images/project/video/benz01.jpg" alt="" />
+                            </div>
+                            <div class="PLText">
+                                <h2>數位海報製作</h2>
+                                <p>Mercedes Benz / <span class="sort"></span><span class="PLTime"></span></p>
+                            </div>
+                        </a>
+                    </div>
+
+
+
+                </div>
             </div>
 
-            <div class="mixerContainer">
-                <!-- Event website -->
-                <div class="projectList mix events" data-published-date="2018-03">
-                    <a href="http://www.daehyon.com/" target="_blank">
-                        <div class="PLPhoto">
-                            <img src="assets/images/project/daehyon.jpg" alt="" />
-                        </div>
-                        <div class="PLText">
-                            <h2>Daehyon Offical Site</h2>
-                            <p>Daehyon / <span class="sort"></span><span class="PLTime"></span></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="projectList mix events" data-published-date="2018-06">
-                    <a href="assets/project/asus_GameRouter/" target="_blank">
-                        <div class="PLPhoto">
-                            <img src="assets/images/project/asus_GameRouter.jpg" alt="" />
-                        </div>
-                        <div class="PLText">
-                            <h2>ASUS Gaming Router</h2>
-                            <p>ASUS / <span class="sort"></span><span class="PLTime"></span></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="projectList mix events" data-published-date="2018-04">
-                    <a href="assets/project/asus_pg27uq/" target="_blank">
-                        <div class="PLPhoto">
-                            <img src="assets/images/project/asus_pg27uq.jpg" alt="" />
-                        </div>
-                        <div class="PLText">
-                            <h2>ASUS PG27UQ</h2>
-                            <p>ASUS / <span class="sort"></span><span class="PLTime"></span></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="projectList mix events" data-published-date="2018-07">
-                    <a href="http://cestudio.tw/portfolio/case/event/Fundsyes/fundsyes_20180726/index.html" target="_blank">
-                        <div class="PLPhoto">
-                            <img src="assets/images/project/foundsyes.jpg" alt="" />
-                        </div>
-                        <div class="PLText">
-                            <h2>每月999 財富久久久</h2>
-                            <p>鉅亨基金交易平台 / <span class="sort"></span><span class="PLTime"></span></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="projectList mix events" data-published-date="2018-05">
-                    <a href="http://cestudio.tw/portfolio/case/event/mio/record/index.html" target="_blank">
-                        <div class="PLPhoto">
-                            <img src="assets/images/project/mio.jpg" alt="" />
-                        </div>
-                        <div class="PLText">
-                            <h2>Mio 愛演 / 犯規 你有錄</h2>
-                            <p>Mio / <span class="sort"></span><span class="PLTime"></span></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="projectList mix events" data-published-date="2018-04">
-                    <a href="http://cestudio.tw/portfolio/case/event/HYUNDAI/Elantra/index.html" target="_blank">
-                        <div class="PLPhoto">
-                            <img src="assets/images/project/elantra.jpg" alt="" />
-                        </div>
-                        <div class="PLText">
-                            <h2>ELANTRA 安全智能版</h2>
-                            <p>HYUNDAI / <span class="sort"></span><span class="PLTime"></span></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="projectList mix events" data-published-date="2017-11">
-                    <a href="assets/project/nomura/" target="_blank">
-                        <div class="PLPhoto">
-                            <img src="assets/images/project/nomura.jpg" alt="" />
-                        </div>
-                        <div class="PLText">
-                            <h2>征服亞洲 稱霸8方</h2>
-                            <p>野村投信 / <span class="sort"></span><span class="PLTime"></span></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="projectList mix events" data-published-date="2018-07">
-                    <a href="https://scholarship.foxconnfoundation.org/index.php" target="_blank">
-                        <div class="PLPhoto">
-                            <img src="assets/images/project/foxconn.jpg" alt="" />
-                        </div>
-                        <div class="PLText">
-                            <h2>您的夢想頻率 被聽見</h2>
-                            <p>鴻海獎學鯨 / <span class="sort"></span><span class="PLTime"></span></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="projectList mix events" data-published-date="2017-01">
-                    <a href="https://www.elancyl.com.tw/event/aderma_exomega/" target="_blank">
-                        <div class="PLPhoto">
-                            <img src="assets/images/project/aderma.jpg" alt="" />
-                        </div>
-                        <div class="PLText">
-                            <h2>艾芙美燕麥新葉</h2>
-                            <p>艾芙美 / <span class="sort"></span><span class="PLTime"></span></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="projectList mix events" data-published-date="2017-08">
-                    <a href="http://demo-d2.webssup.com/van/website/VAN-1_WebsiteLayout_201706/0803_final_v1/desktop/" target="_blank">
-                        <div class="PLPhoto">
-                            <img src="assets/images/project/van1.jpg" alt="" />
-                        </div>
-                        <div class="PLText">
-                            <h2>和平大苑</h2>
-                            <p>和平大苑 / <span class="sort"></span><span class="PLTime"></span></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="projectList mix events" data-published-date="2017-12">
-                    <a href="http://demo-d2.webssup.com/van/website/van-13_Website_201712/0628_packfile_v1/" target="_blank">
-                        <div class="PLPhoto">
-                            <img src="assets/images/project/van13.jpg" alt="" />
-                        </div>
-                        <div class="PLText">
-                            <h2>大觀自若</h2>
-                            <p>大觀自若 / <span class="sort"></span><span class="PLTime"></span></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="projectList mix events" data-published-date="2018-01">
-                    <a href="http://demo-d2.webssup.com/van/website/VAN-16_Website_201801/0824_v1/" target="_blank">
-                        <div class="PLPhoto">
-                            <img src="assets/images/project/van16.jpg" alt="" />
-                        </div>
-                        <div class="PLText">
-                            <h2>礁溪湯園2</h2>
-                            <p>礁溪湯園2 / <span class="sort"></span><span class="PLTime"></span></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="projectList mix events" data-published-date="2018-08">
-                    <a href="http://demo-d2.webssup.com/van/website/VAN-18_Website_201808/v1/" target="_blank">
-                        <div class="PLPhoto">
-                            <img src="assets/images/project/van18.jpg" alt="" />
-                        </div>
-                        <div class="PLText">
-                            <h2>藍田陞玉</h2>
-                            <p>藍田陞玉 / <span class="sort"></span><span class="PLTime"></span></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="projectList mix events" data-published-date="2016-07">
-                    <a href="http://webssup-tw.com/dominos-2016lucky/" target="_blank">
-                        <div class="PLPhoto">
-                            <img src="assets/images/project/dominosevent.jpg" alt="" />
-                        </div>
-                        <div class="PLText">
-                            <h2>週年慶發票登入抽獎</h2>
-                            <p>Dominos / <span class="sort"></span><span class="PLTime"></span></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="projectList mix events" data-published-date="2017-03">
-                    <a href="http://demo-d2.webssup.com/Panasonic/website/PanasonicBeauty/201703/sp/" target="_blank">
-                        <div class="PLPhoto">
-                            <img src="assets/images/project/PanasonicBeauty2.jpg" alt="" />
-                        </div>
-                        <div class="PLText">
-                            <h2>Panasonic Beauty</h2>
-                            <p>Panasonic / <span class="sort"></span><span class="PLTime"></span></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="projectList mix events" data-published-date="2016-11">
-                    <a href="http://demo-d2.webssup.com/Panasonic/website/PanasonicBeauty/201611/sp/" target="_blank">
-                        <div class="PLPhoto">
-                            <img src="assets/images/project/PanasonicBeauty1.jpg" alt="" />
-                        </div>
-                        <div class="PLText">
-                            <h2>Panasonic Beauty NA98</h2>
-                            <p>Panasonic / <span class="sort"></span><span class="PLTime"></span></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="projectList mix events" data-published-date="2018-04">
-                    <a href="http://demo-d2.webssup.com/Allianz/AL-179_Allianz_Internal_Design_201804/0606_gacode/mind-test/" target="_blank">
-                        <div class="PLPhoto">
-                            <img src="assets/images/project/allianz.jpg" alt="" />
-                        </div>
-                        <div class="PLText">
-                            <h2>安聯人壽 足下測驗</h2>
-                            <p>Allianz / <span class="sort"></span><span class="PLTime"></span></p>
-                        </div>
-                    </a>
-                </div>
+            <div id="tabs-2">
+                <h1>EXPERIENCE</h1>
+                <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut
+                    dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla.
+                    Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+            </div>
 
-
-
+        </div>
+        <div class="hidden-desktop footer">
+            <ul class="footerIcon">
+                <li>
+                    <a target="_blank" href="javascript:;"><img src="assets/images/facebook.svg" alt=""></a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:;"><img src="assets/images/instergram.svg" alt=""></a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://github.com/Ryannnlee"><img src="assets/images/github.svg" alt=""></a>
+                </li>
+            </ul>
+            <div class="copyRight">
+                <p>copyright © 2018 Ryan . All right reserved</p>
             </div>
         </div>
-
-        <div id="tabs-2">
-            <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor.
-                Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam
-                erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
-        </div>
-
     </div>
-
 </div>
 
 
 
-
 <!-- index_page1 js -->
-
-<script src="assets/js/mixitup.min.js"></script>
+<script src="assets/lib/js/mixitup.min.js"></script>
 <script src="assets/js/main.js"></script>
 
 </body>

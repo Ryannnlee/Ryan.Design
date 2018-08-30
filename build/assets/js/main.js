@@ -5,11 +5,17 @@ $(function () {
         show: { effect: "fade", duration: 300 }
     });
 
+    //set scrollbar
+    $('.scrollbar-dynamic').scrollbar();
+    var $WH = $(window).height();
+    console.log($WH);
+    $('.ScrollBarSet').parent().height($WH - 1);
+
     //mixer
     var containerEl = document.querySelector('.mixerContainer');
     var mixer = mixitup(containerEl, {
         animation: {
-            effects: 'fade scale stagger(50ms)'
+            effects: 'fade scale'
         },
         controls: {
             toggleLogic: 'and'
@@ -59,5 +65,16 @@ $(function () {
             $('.mixItemSelected').text($thisText);
             return false;
         });
+    });
+
+    //menu
+    $('#navToggle').on('click', function () {
+        $(this).toggleClass('active');
+        $('#overlay').toggleClass('open');
+    });
+
+    $('#overlay li').on('click', function () {
+        $('#nav-toggle').removeClass('active');
+        $('#overlay').removeClass('open');
     });
 });
