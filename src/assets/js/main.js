@@ -4,10 +4,10 @@ $(function() {
     });
 
     //set scrollbar
-    $('.scrollbar-dynamic').scrollbar();
-    var $WH = $(window).height();
-    console.log($WH);
-    $('.ScrollBarSet').parent().height($WH - 1);
+    // $('.scrollbar-dynamic').scrollbar();
+    // var $WH = $(window).height();
+    // console.log($WH);
+    // $('.ScrollBarSet').parent().height($WH - 1);
 
 
     //mixer
