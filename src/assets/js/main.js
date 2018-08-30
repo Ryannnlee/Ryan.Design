@@ -80,3 +80,14 @@ $(function() {
     });
 
 });
+
+
+$(window).on("load", function() {
+    setTimeout(function() { $('.main').css({ "opacity": 1 }); }, 2500);
+    setTimeout(function() { $('#loading').fadeOut(); }, 2500);
+    $('html, body').animate({ scrollTop: 0 }, 1);
+    if (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase())) {
+        setTimeout(function() { $('#loading').fadeOut(); }, 1000);
+        $('html, body').animate({ scrollTop: 0 }, 1);
+    }
+});

@@ -22,10 +22,27 @@
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
-    <script src="assets/lib/js/jquery.scrollbar.js"></script>
+    <script>
+        // plugins.js
+        $(function() {
+            if ((navigator.platform == "Mac68K") || (navigator.platform == "MacPPC") || (navigator.platform == "Macintosh") || (navigator.platform == "MacIntel") || navigator.userAgent.match("Firefox") || navigator.userAgent.match("IE")) {} else {
+                var jstag = document.createElement('script');
+                jstag.src = "assets/lib/js/jquery.scrollbar.js";
+                var jsfirstScriptTag = document.getElementsByTagName('script')[2];
+                jsfirstScriptTag.parentNode.insertBefore(jstag, jsfirstScriptTag);
+            }
+        });
+    </script>
+    <!-- <script src="assets/lib/js/jquery.scrollbar.js"></script> -->
 </head>
 
 <body>
+    <div id="loading">
+        <svg id="loadingcircle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 77.3 53.5" style="enable-background:new 0 0 77.3 53.5;" xml:space="preserve">
+            <circle class="lc circle01" cx="27" cy="26.8" r="25"/>
+            <circle class="lc circle02" cx="50" cy="26.8" r="25"/>
+        </svg>
+    </div>
 
 <div class="ScrollBarSet  scrollbar-dynamic">
     <div class="wrapper">
@@ -37,7 +54,7 @@
         <div class="man">
             <div class="manPhoto"></div>
             <div class="manInfo">
-                <div class="title">Web Design,<br>Front-End Enginner</div>
+                <div class="title">Web Designer,<br>Front-End Enginner</div>
                 <div class="location">Taipei, Taiwan</div>
             </div>
         </div>

@@ -107,3 +107,52 @@ img {
         display: none;
     }
 }
+
+#loading {
+    position: fixed;
+    background: #eeeeee;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    #loadingcircle {
+        width: 100px;
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        @include transform(translate(0, -50%));
+        .lc {
+            fill: none;
+            stroke: #FF7800;
+            stroke-width: 2;
+            stroke-dashoffset: 600;
+            stroke-dasharray: 600;
+            -webkit-animation: circle-draw 3s linear infinite;
+            -moz-animation: circle-draw 3s linear infinite;
+            -o-animation: circle-draw 3s linear infinite;
+            animation: circle-draw 3s linear infinite;
+            @include transform(rotate(0deg));
+        }
+        .circle01 {
+            @include transform-og(35%);
+            @include transform(translate(30%, 0));
+        }
+        .circle02 {
+            @include transform-og(65%);
+            animation-delay: 0.3s;
+            @include transform(translate(-30%, 0));
+        }
+    }
+}
+
+@keyframes circle-draw {
+    70% {
+        stroke-dashoffset: 0;
+        @include transform(rotate(180deg));
+        @include transform(translate(0, 0));
+    }
+    100% {
+        @include transform(rotate(0deg));
+    }
+}
