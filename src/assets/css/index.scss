@@ -154,8 +154,6 @@ h1 {
 .projectList {
     background: #eeeeee;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
-    @include transition(all 0.3s);
-    @include transform(translate(0, 0)scale(1));
     .PLPhoto {
         width: 100%;
         overflow: hidden;
@@ -200,11 +198,13 @@ h1 {
 
 @media screen and (min-width: 1024px) {
     .projectList:hover {
-        @include transform(translate(-5px, -5px)scale(1.05));
         box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
         .PLPhoto {
             &:after {
                 opacity: 0;
+            }
+            >img {
+                @include transform(scale(1.1));
             }
         }
         .PLText {
@@ -233,9 +233,9 @@ h1 {
         position: inherit;
         padding: 15px;
         background: #eeeeee;
-        .footerIcon li {
-            margin-bottom: 10px;
-        }
+    }
+    .footerIcon li {
+        margin-bottom: 10px;
     }
 }
 
