@@ -108,20 +108,26 @@ img {
     }
 }
 
+// loading
 #loading {
     position: fixed;
     background: #eeeeee;
     width: 100%;
     height: 100vh;
     z-index: 999;
-    #loadingcircle {
-        width: 100px;
+    .loadingBox {
+        width: 250px;
         margin: 0 auto;
         position: absolute;
         top: 50%;
         left: 0;
         right: 0;
         @include transform(translate(0, -50%));
+        text-align: center;
+    }
+    #loadingcircle {
+        width: 80px;
+        margin-bottom: 30px;
         .lc {
             fill: none;
             stroke: #FF7800;
@@ -144,6 +150,34 @@ img {
             @include transform(translate(-30%, 0));
         }
     }
+    .loadingBar {
+        width: 100%;
+        height: 4px;
+        position: relative;
+        border-radius: 3px;
+        .loadingBarBG,
+        .loadingBarRun {
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            border-radius: 3px;
+        }
+        .loadingBarBG {
+            width: 100%;
+            background: #cccccc;
+        }
+        .loadingBarRun {
+            width: 100%;
+            background: #999999;
+            -webkit-animation: loadingBar 2.5s linear;
+            -moz-animation: loadingBar 2.5s linear;
+            -o-animation: loadingBar 2.5s linear;
+            animation: loadingBar 2.5s linear;
+        }
+    }
 }
 
 @keyframes circle-draw {
@@ -154,5 +188,23 @@ img {
     }
     100% {
         @include transform(rotate(0deg));
+    }
+}
+
+@keyframes loadingBar {
+    0% {
+        width: 0%;
+    }
+    25% {
+        width: 50%;
+    }
+    40% {
+        width: 60%;
+    }
+    60% {
+        width: 90%;
+    }
+    100% {
+        width: 100%;
     }
 }

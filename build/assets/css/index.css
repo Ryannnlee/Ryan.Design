@@ -317,6 +317,12 @@ h1 {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .Container {
+    padding: 65px 15px 15px 15px;
+  }
+}
+
 @media screen and (max-width: 640px) {
   .mixerContainer {
     -ms-grid-columns: 1fr 1fr;

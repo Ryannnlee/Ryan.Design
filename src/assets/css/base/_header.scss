@@ -331,6 +331,23 @@ $secondColor: #575757;
     }
 }
 
+@media screen and (max-width: 767px) {
+    #logo {
+        width: 30%;
+    }
+    .buttonContainer {
+        right: 4px;
+        height: 14px;
+        width: 25px;
+    }
+    .buttonContainer.active .top {
+        @include transform(translateY(6px) translateX(-50%) rotate(45deg));
+    }
+    .buttonContainer.active .bottom {
+        @include transform(translateY(-9px) translateX(-50%) rotate(-45deg));
+    }
+}
+
 @-webkit-keyframes fadeInRight {
     0% {
         opacity: 0;
